@@ -1,5 +1,6 @@
 console.log('hello all')
 
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('hello all over the world')
     let form = document.querySelector('#NGO-form')
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=${search}`)
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=fremont`)
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=oakland`)
     .then(function (result) {
         
         data = result.data.organizations
@@ -34,5 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     })
 })
-
-
+ 
