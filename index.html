@@ -4,17 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>LwinProject</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 
         create a page where user can query list of NGOs via API 
         1. create form where user input parameters
         2. retrieve data (json objects) from API (possile without authentication key)
+        https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf
+        https://projects.propublica.org/nonprofits/api
+        https://www.propublica.org/datastore/api/nonprofit-explorer-api
         3. run Loop to filter data for user query
         4. group those filtered data into Array
         5. if nessary run another Loop for new Array
         6. return final value via DOM on web page
     -->
+   
+    <div class="ui pointing menu">
+        <a class="active item">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Links
+        </a>
+    </div>
+    <div class="ui segment">
+        <p>Something goes here.</p>
+    </div>
+
+
+    <div id="main" class="ui container">
+        <h1>Nonprofit Explorer</h1>
+
+        <form id="NGO-form">
+          <input type="text" id="search" placeholder="Type keyword">
+          <button type="submit" class="ui basic button"> 
+            <i class="icon search"></i>
+            Search for organizations.
+          </button>
+        </form>
+
+        <div id="cards">
+            <div id="org-append" class="ui cards">  
+            </div>
+        </div>      
+    </div>
+
+
+
+
+
+
+<!-- <br>
+<div class="class1">
+        <h1>UNICEF USA</h1>
+        <p>UNICEF speaks for children when they can’t speak up for themselves.
+           <br> You can be a voice for children who are left behind</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWUuBVcuYHDGTpxD5OKEnmXi6tTPXLHjTOwkHKhXDbr_Ra6IJCMQ" alt="children">
+    </div>
+<br>    
+    <div class="class2">
+        <br>
+        <select name="charity" id="charity">
+            <option value="IFCJ">International Fellowship of Christians & Jews</option>
+            <option value="STC" selected>Save the Children</option>
+            <option value="DWB">Doctors Without Borders, USA</option>
+            <option value="AMC">American Red Cross</option>
+        </select>
+
+        <form action="">
+            <input type="number" min="50" max="9999999" id="amt" name="amt" placeholder="Amount">
+            <input type="button" onclick="alert('Your donation saves the lives of children, Thank you!')" value="Donate Now">
+        </form>
+<br> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
 </body>
+
 </html>

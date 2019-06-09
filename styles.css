@@ -1,0 +1,27 @@
+#main{
+    margin-top: 3em;
+    background-color: rgb(111, 126, 126);
+    text-align: center;
+}
+
+#cards {
+    margin-left: 3em;
+    margin-top: 3em;
+}
+
+.class1 {
+    text-align: center;
+    color: green;
+    background-color: lightblue;
+}
+
+.class2 {
+    margin: auto;
+    margin-top: 3em;
+    text-align: center;
+    color: orange;
+    border: solid; 
+    width: auto; 
+    height:100px;
+}
+
