@@ -2,8 +2,10 @@ console.log('hello all')
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('hello all over the world')
+    
+    
     let form = document.querySelector('#NGO-form')
+    let keyword = document.querySelector('#keyword')
     let appendHere = document.querySelector('#org-append')
     let card
     let data
@@ -11,7 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let orgs
 
 
-    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=${search}`)
+   form.addEventListener('submit', function(event){
+       event.preventDefault()
+       console.log('hello all over the world')
+       pushApi(keyword)
+   })
+  
+    function pushApi(keyword){
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=${keyword}`)
     axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=oakland`)
     .then(function (result) {
         
@@ -33,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
             appendHere.appendChild(shell)
         }
     
-    })
-})
- 
+    }) //axios function
+    
+} // push API
+
+}) //submit EventListener
+
+}) //form EventListener
+
+
