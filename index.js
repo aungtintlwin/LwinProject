@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     let form = document.querySelector('#NGO-form')
-    let keyword = document.querySelector('#keyword')
+    // let keyword = document.querySelector('#keyword').value
     let appendHere = document.querySelector('#org-append')
     let card
     let data
@@ -15,13 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
    form.addEventListener('submit', function(event){
        event.preventDefault()
+       let keyword = document.querySelector('#keyword').value
        console.log('hello all over the world')
+       console.log(keyword)
        pushApi(keyword)
+       appendHere.innerHTML = "";
    })
   
     function pushApi(keyword){
-    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=${keyword}`)
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=oakland`)
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=${keyword}`)
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://projects.propublica.org/nonprofits/api/v2/search.json?q=fremont`)
     .then(function (result) {
         
         data = result.data.organizations
@@ -43,11 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
     }) //axios function
-    
+
 } // push API
 
-}) //submit EventListener
-
 }) //form EventListener
+
 
 
